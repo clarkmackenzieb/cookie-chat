@@ -13,14 +13,16 @@
       <div class="filter">
       <input class="form-control text-box" type="text" ng-model="searchFilter" placeholder="Filter by Message">
       </div>
+
       <div class="msginput">
       <form ng-submit="postMessage(message)">
-        <input class="form-control text-box" type="text" ng-model="message" placeholder="Message">
+        <input class="form-control text-box" type="text"  ng-model="message" placeholder="Message">
       </form>
     </div>
+
       <div class="messages-container">
         <p class="indvmess"ng-repeat="message in messages | filter: searchFilter">
-          {{message.message}} <br><span class="time">({{message.createdAt | date:'yyyy/MM/dd HH:mm'}})<span> </p>
+          {{message.message}} <br><span class="time">({{message.createdAt | date:'short'}})<span> </p>
       </div>
     </div>
 

@@ -14,7 +14,8 @@ messageService.getMessages().then(function(response){
   $scope.postMessage = function(message){
   messageService.postMessage(message).then(function(response){
     $scope.getMessages();
-})
+});
+    $scope.message = "";
   }
 
 
